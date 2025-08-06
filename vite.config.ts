@@ -16,6 +16,28 @@ export default defineConfig({
         ]
       : []),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor': [
+            'react',
+            'react-dom',
+            'wouter',
+            '@tanstack/react-query',
+            'framer-motion'
+          ],
+          'ui': [
+            '@/components/ui',
+          ],
+          'landing': [
+            '@/components/landing'
+          ]
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
