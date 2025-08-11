@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ApiResponse, ApiError } from '@shared/types/api.types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://cafe-buddy-pos-backend.vercel.app/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cafe-buddy-pos-backend.vercel.app/api/v1';
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,

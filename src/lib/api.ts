@@ -1,5 +1,5 @@
 // API client with automatic auth token inclusion
-const API_BASE_URL = 'http://cafe-buddy-pos-backend.vercel.app/api/v1';
+const API_BASE_URL = 'https://cafe-buddy-pos-backend.vercel.app/api/v1';
 
 class ApiClient {
   private baseURL: string;
