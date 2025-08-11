@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const fetchProfile = async (token: string) => {
     try {
-      const response = await fetch('http://localhost:3001/api/v1/auth/profile', {
+      const response = await fetch('http://cafe-buddy-pos-backend.vercel.app/api/v1/auth/profile', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const login = async (email: string, password: string) => {
     try {
       console.log('🔑 Attempting login...');
-      const response = await fetch('http://localhost:3001/api/v1/auth/login', {
+      const response = await fetch('http://cafe-buddy-pos-backend.vercel.app/api/v1/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
